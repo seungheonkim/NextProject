@@ -1,6 +1,6 @@
 import Card from '../ui/Card';
 import classes from './MeetupItem.module.css';
-import {useRouter} from "next/dist/client/router";
+import {useRouter} from "next/router";
 
 function MeetupItem(props) {
 
