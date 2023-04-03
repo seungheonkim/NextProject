@@ -34,7 +34,7 @@ export const getStaticPaths = async () => {
     await client.close();
 
     return {
-        fallback: false,//밑에 해당하는 path 들만 미리 생성해놓도록 설정 (true 일경우)
+        fallback: 'blocking',//밑에 해당하는 path 들만 미리 생성해놓도록 설정 (true 일경우)
         paths: meetups.map(meetup => ({params: {meetupId: meetup._id.toString()}}))
     }
 };
